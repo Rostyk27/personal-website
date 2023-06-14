@@ -25,7 +25,7 @@ const redis = Redis.fromEnv();
 //     }));
 // }
 
-export const getProjectBySlug = async (slug: string) => {
+const getProjectBySlug = async (slug: string) => {
   const project = allProjects.find(
     (project) => project.slug === slug && project.published
   );
