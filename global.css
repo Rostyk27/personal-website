@@ -3,8 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-  .text-edge-outline {
-    -webkit-text-stroke: 1px rgba(255,255,255,0.3);
+  html::-webkit-scrollbar {
+    width: 6px;
   }
-} 
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-800;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-zinc-300;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-600;
+  }
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-zinc-600;
+  }
+  :root {
+    scrollbar-width: thin;
+  }
 
+  .text-edge-outline {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  }
+}
