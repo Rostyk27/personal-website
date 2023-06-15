@@ -7,7 +7,7 @@
     width: 6px;
   }
   ::-webkit-scrollbar-thumb {
-    @apply bg-zinc-800;
+    @apply bg-zinc-900;
   }
   ::-webkit-scrollbar-track {
     @apply bg-zinc-300;
