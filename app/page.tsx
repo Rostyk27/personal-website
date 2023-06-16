@@ -31,17 +31,17 @@ export default function Home() {
         quantity={100}
       />
 
-      <h1 className="text-edge-outline z-10 animate-title cursor-default whitespace-nowrap bg-white bg-clip-text font-display text-4xl text-transparent sm:text-6xl md:text-9xl">
+      <h1 className="text-edge-outline z-10 animate-title cursor-default whitespace-nowrap bg-white bg-clip-text font-display text-5xl text-transparent sm:text-6xl md:text-9xl">
         rostyk.dev
       </h1>
 
       <div className="animate-glow hidden h-px w-screen animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0 md:block" />
 
       <div className="mx-auto my-16 max-w-2xl animate-fade-in text-center">
-        <p className="px-2 text-sm text-zinc-500">
-          Hi, my name is Rostyk, I'm an experienced front-end engineer.
-          Currently, I'm focused on enhancing my development skills in React and
-          Next.js to deliver cutting-edge solutions.
+        <p className="px-8 text-sm text-zinc-500">
+          Hi, my name is Rostyk, I'm an experienced front-end engineer focused
+          on enhancing my skills in React and Next.js to deliver cutting-edge
+          solutions.
         </p>
       </div>
     </div>

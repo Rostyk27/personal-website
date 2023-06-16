@@ -1,30 +1,34 @@
-import "../global.css";
-import { Inter } from "@next/font/google";
-import LocalFont from "@next/font/local";
-import { Metadata } from "next";
-import { Analytics } from "./components/analytics";
+import '../global.css';
+import { Inter } from '@next/font/google';
+import LocalFont from '@next/font/local';
+import { Metadata } from 'next';
+import { Analytics } from './components/analytics';
+
+const seoTitle = 'rostyk.dev';
+const seoSiteURL = 'https://rostyk.dev';
+const seoDesc =
+  'Front-end engineer focused on enhancing skills in React and Next.js';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(seoSiteURL),
   title: {
-    default: "rostyk.dev",
-    template: "%s | chronark.com",
+    template: '%s - ' + seoTitle,
+    default: seoTitle,
   },
-  description: "Software engineer at upstash.com and founder of planetfall.io",
+  description: seoDesc,
   openGraph: {
-    title: "chronark.com",
-    description:
-      "Software engineer at upstash.com and founder of planetfall.io",
-    url: "https://chronark.com",
-    siteName: "chronark.com",
+    title: seoTitle,
+    description: seoDesc,
+    url: seoSiteURL,
+    siteName: seoTitle,
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: seoSiteURL + '/og.png',
         width: 1920,
         height: 1080,
       },
     ],
-    locale: "en-US",
-    type: "website",
+    type: 'website',
   },
   robots: {
     index: true,
@@ -32,27 +36,28 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   twitter: {
-    title: "Chronark",
-    card: "summary_large_image",
+    card: 'summary_large_image',
   },
   icons: {
-    shortcut: "/favicon.png",
+    shortcut: '/favicon.png',
   },
+  themeColor: 'black',
 };
+
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+  subsets: ['latin'],
+  variable: '--font-inter',
 });
 
 const calSans = LocalFont({
-  src: "../public/fonts/CalSans-SemiBold.ttf",
-  variable: "--font-calsans",
+  src: '../public/fonts/CalSans-SemiBold.ttf',
+  variable: '--font-calsans',
 });
 
 export default function RootLayout({
@@ -61,13 +66,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
+    <html lang="en" className={[inter.variable, calSans.variable].join(' ')}>
       <head>
         <Analytics />
       </head>
       <body
         className={`bg-black ${
-          process.env.NODE_ENV === "development" ? "debug-screens" : undefined
+          process.env.NODE_ENV === 'development' ? 'debug-screens' : undefined
         }`}
       >
         {children}

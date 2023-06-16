@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import React from 'react';
+import { Metadata } from 'next';
+import { seoData } from '@/util/seo';
 import { allProjects } from 'contentlayer/generated';
 import { Navigation } from '../components/nav';
 import { Card } from '../components/card';
@@ -7,10 +8,17 @@ import { Article } from './article';
 import { Redis } from '@upstash/redis';
 import { Eye } from 'lucide-react';
 
+const templateSeo = seoData(
+  'Projects',
+  '/projects',
+  'Here are some of my projects, showcasing my passion for creating remarkable digital experiences'
+);
+
+export const metadata: Metadata = templateSeo;
+
 const redis = Redis.fromEnv();
 
-// export const revalidate = 60;
-export const revalidate = 0;
+export const revalidate = 60;
 
 export default async function ProjectsPage() {
   const views = (

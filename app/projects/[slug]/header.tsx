@@ -103,16 +103,20 @@ export const Header: React.FC<Props> = ({ project, views }) => {
           </div>
 
           <div className="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+            <div className="gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:flex sm:justify-center lg:gap-x-10">
               {links.map(link => (
-                <Link
-                  target="_blank"
+                <div
                   key={link.label}
-                  href={link.href}
-                  className="duration-200 hover:text-zinc-300"
+                  className="mx-auto even:pt-4 sm:even:pt-0"
                 >
-                  {link.label} <span aria-hidden="true">&rarr;</span>
-                </Link>
+                  <Link
+                    target="_blank"
+                    href={link.href}
+                    className="duration-200 hover:text-zinc-300"
+                  >
+                    {link.label} <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                </div>
               ))}
             </div>
           </div>
