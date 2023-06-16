@@ -62,7 +62,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
             : 'border-zinc-200  bg-white/10 lg:border-transparent'
         }`}
       >
-        <div className="container mx-auto flex flex-row-reverse items-center justify-between p-6">
+        <div className="mx-auto flex max-w-screen-2xl flex-row-reverse items-center justify-between p-6">
           <div className="flex justify-between gap-8">
             <span
               title="View counter for this page"
@@ -91,7 +91,7 @@ export const Header: React.FC<Props> = ({ project, views }) => {
         </div>
       </div>
 
-      <div className="container relative isolate mx-auto overflow-hidden  py-24 sm:py-32">
+      <div className="container relative isolate mx-auto overflow-hidden pb-16 pt-24 sm:py-32">
         <div className="mx-auto flex max-w-7xl flex-col items-center px-6 text-center lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
             <h1 className="font-display text-4xl font-bold tracking-tight text-white sm:text-6xl">

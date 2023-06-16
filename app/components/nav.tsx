@@ -3,7 +3,7 @@
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useRef, useState } from 'react';
-import NavLink from './navLink';
+import NavLink from './NavLink';
 
 export const Navigation: React.FC = () => {
   const ref = useRef<HTMLElement>(null);
@@ -28,7 +28,7 @@ export const Navigation: React.FC = () => {
             : 'bg-zinc-900/500  border-zinc-800 '
         }`}
       >
-        <ul className="container mx-auto flex flex-row-reverse items-center justify-between p-6">
+        <ul className="mx-auto flex max-w-screen-2xl flex-row-reverse items-center justify-between p-6">
           <div className="flex justify-between gap-8">
             <NavLink title="Projects" slug="/projects" />
             <NavLink title="Contact" slug="/contact" />

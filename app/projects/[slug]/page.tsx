@@ -59,7 +59,7 @@ export default async function PostPage({ params }: ProductSingleProps) {
       <Header project={project} views={views} />
       <ReportView slug={project.slug} />
 
-      <article className="prose prose-zinc prose-quoteless mx-auto px-4 py-12">
+      <article className="prose prose-zinc prose-quoteless mx-auto px-6 pb-12 pt-10 sm:pt-12">
         <Mdx code={project.body.code} />
       </article>
     </div>
