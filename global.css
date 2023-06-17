@@ -26,3 +26,8 @@
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
   }
 }
+
+.mob_h_fix {
+  height: 100vh;
+  height: 100dvh;
+}
