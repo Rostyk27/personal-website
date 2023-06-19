@@ -4,10 +4,10 @@ import LocalFont from '@next/font/local';
 import { Metadata } from 'next';
 import { Analytics } from './components/analytics';
 
-const seoTitle = 'rostyk.dev';
+const seoTitle = 'Rostyk Chaikivskyi';
 const seoSiteURL = 'https://rostyk.dev';
 const seoDesc =
-  'Front-end engineer focused on enhancing skills in React and Next.js';
+  'Front-end engineer dedicated to advancing skills in React and Next.js.';
 
 export const metadata: Metadata = {
   metadataBase: new URL(seoSiteURL),

@@ -39,8 +39,8 @@ export default function Home() {
 
       <div className="mx-auto my-16 max-w-2xl animate-fade-in text-center">
         <p className="px-8 text-sm text-zinc-500">
-          Hi, my name is Rostyk, I'm an experienced front-end engineer focused
-          on enhancing my skills in React and Next.js to deliver cutting-edge
+          Hi, my name is Rostyk, I'm an experienced front-end engineer dedicated
+          to advancing my skills in React and Next.js to deliver cutting-edge
           solutions.
         </p>
       </div>
