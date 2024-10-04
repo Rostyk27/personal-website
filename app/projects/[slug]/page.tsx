@@ -39,7 +39,7 @@ export async function generateMetadata({
   return templateSeo;
 }
 
-export const revalidate = 60;
+export const revalidate = 5;
 
 const redis = Redis.fromEnv();
 

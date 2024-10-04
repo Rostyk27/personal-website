@@ -18,7 +18,7 @@ export const metadata: Metadata = templateSeo;
 
 const redis = Redis.fromEnv();
 
-export const revalidate = 60;
+export const revalidate = 5;
 
 export default async function ProjectsPage() {
   const views = (
