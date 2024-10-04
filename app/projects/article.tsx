@@ -21,7 +21,7 @@ export const Article: React.FC<Props> = ({ project, views }) => {
                 }).format(new Date(project.date))}
               </time>
             ) : (
-              <span>SOON</span>
+              <span>Ongoing</span>
             )}
           </span>
 

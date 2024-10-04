@@ -1,0 +1,11 @@
+---
+title: Frontend of API-first solution
+description: The project is an admin panel for clients to manage data in a headless API system, deployed on Azure cloud infrastructure.
+published: true
+---
+
+This is a closed system built with **React** and **TypeScript**, where users can log in via **Azure MSAL** for secure authentication and access control. The system supports role-based access, meaning users can be assigned different roles to either review or manage data, ensuring that only authorized individuals can perform sensitive operations.
+
+Data entities within the system are managed according to standard **REST API** rules, enabling users to perform GET, POST, PUT, and DELETE requests. These interactions are handled efficiently using **React Query** for data synchronization and **Axios** for API communication, ensuring real-time updates and smooth data handling across the platform.
+
+The admin panel features overview pages displaying data in tables, with options to search, filter, and sort the data for easy management. For most entities, there are detailed pages providing more in-depth information. The user interface is built with **Material UI**, delivering a clean and professional look across the platform. Most actions, such as creating or editing data, are performed via modals and forms, which are constructed using **React Hook Form** for efficient form management and **Zod** for schema-based validation, ensuring data integrity and a smooth user experience.

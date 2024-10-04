@@ -11,7 +11,7 @@ import { Eye } from 'lucide-react';
 const templateSeo = seoData(
   'Projects',
   '/projects',
-  'Here are some of my projects, showcasing my passion for creating remarkable digital experiences'
+  `Here are some of the projects I've developed or contributed to, showcasing my passion for creating remarkable digital experiences.`
 );
 
 export const metadata: Metadata = templateSeo;
@@ -31,10 +31,14 @@ export default async function ProjectsPage() {
   }, {} as Record<string, number>);
 
   const featured = allProjects.find(
-    project => project.slug === 'api-powered-data-sharing-platform'
+    project => project.slug === 'data-sharing-platform'
   )!;
-  const top2 = allProjects.find(project => project.slug === 'nextjs-shop')!;
-  const top3 = allProjects.find(project => project.slug === 'react-shop')!;
+  const top2 = allProjects.find(
+    project => project.slug === 'react-admin-panel'
+  )!;
+  const top3 = allProjects.find(
+    project => project.slug === 'marketing-website'
+  )!;
   const sorted = allProjects
     .filter(p => p.published)
     .filter(
@@ -60,8 +64,8 @@ export default async function ProjectsPage() {
           </h1>
 
           <p className="mt-4 text-zinc-400">
-            Here are some of my projects, showcasing my passion for creating
-            remarkable digital experiences.
+            Here are some of the projects I've developed or contributed to,
+            showcasing my passion for creating remarkable digital experiences.
           </p>
         </div>
         <div className="h-px w-full bg-zinc-800" />
@@ -80,7 +84,7 @@ export default async function ProjectsPage() {
                         }).format(new Date(featured.date))}
                       </time>
                     ) : (
-                      <span>Current</span>
+                      <span>Ongoing</span>
                     )}
                   </div>
                   <span className="flex items-center gap-1 text-xs text-zinc-500">
