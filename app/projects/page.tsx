@@ -30,9 +30,11 @@ export default async function ProjectsPage() {
     return acc;
   }, {} as Record<string, number>);
 
-  const featured = allProjects.find(project => project.slug === 'nextjs-shop')!;
-  const top2 = allProjects.find(project => project.slug === 'react-shop')!;
-  const top3 = allProjects.find(project => project.slug === 'todo-app')!;
+  const featured = allProjects.find(
+    project => project.slug === 'api-powered-data-sharing-platform'
+  )!;
+  const top2 = allProjects.find(project => project.slug === 'nextjs-shop')!;
+  const top3 = allProjects.find(project => project.slug === 'react-shop')!;
   const sorted = allProjects
     .filter(p => p.published)
     .filter(
@@ -78,7 +80,7 @@ export default async function ProjectsPage() {
                         }).format(new Date(featured.date))}
                       </time>
                     ) : (
-                      <span>SOON</span>
+                      <span>Current</span>
                     )}
                   </div>
                   <span className="flex items-center gap-1 text-xs text-zinc-500">
