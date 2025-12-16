@@ -21,14 +21,17 @@ const redis = Redis.fromEnv();
 export const revalidate = 5;
 
 export default async function ProjectsPage() {
-  const views = (
-    await redis.mget<number[]>(
-      ...allProjects.map(p => ['pageviews', 'projects', p.slug].join(':'))
-    )
-  ).reduce((acc, v, i) => {
-    acc[allProjects[i].slug] = v ?? 0;
-    return acc;
-  }, {} as Record<string, number>);
+  const views =
+    allProjects.length > 0
+      ? (
+          await redis.mget<number[]>(
+            ...allProjects.map(p => ['pageviews', 'projects', p.slug].join(':'))
+          )
+        ).reduce((acc, v, i) => {
+          acc[allProjects[i].slug] = v ?? 0;
+          return acc;
+        }, {} as Record<string, number>)
+      : {};
 
   const featured = allProjects.find(
     project => project.slug === 'data-sharing-platform'

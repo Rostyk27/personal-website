@@ -14,6 +14,14 @@ type ProductSingleProps = {
   };
 };
 
+export async function generateStaticParams() {
+  return allProjects
+    .filter(project => project.published)
+    .map(project => ({
+      slug: project.slug,
+    }));
+}
+
 const getProjectBySlug = async (slug: string) => {
   const project = allProjects.find(
     project => project.slug === slug && project.published

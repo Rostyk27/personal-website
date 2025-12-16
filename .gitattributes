@@ -1,0 +1,11 @@
+# Ensure all text files use LF
+* text=auto eol=lf
+
+# MDX files
+*.mdx text eol=lf
+
+# Config files
+*.json text eol=lf
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
